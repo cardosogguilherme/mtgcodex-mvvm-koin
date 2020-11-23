@@ -1,4 +1,4 @@
-package com.myrium.data.model
+package com.guilhermecardoso.core.data.model
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,6 +1,6 @@
-package com.myrium.data.remote
+package com.guilhermecardoso.core.data.remote
 
-import com.myrium.data.model.CardResponseDTO
+import com.guilhermecardoso.core.data.model.CardResponseDTO
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Query

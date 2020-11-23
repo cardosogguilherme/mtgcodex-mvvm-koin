@@ -1,15 +1,15 @@
-package com.myrium.di
+package com.guilhermecardoso.core.di
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.myrium.data.endpoint
-import com.myrium.data.remote.ScryfallService
+import com.guilhermecardoso.core.data.endpoint
+import com.guilhermecardoso.core.data.remote.ScryfallService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-val appModule = module {
+val networkModule = module {
     single { createRetrofit(createOkHttpClient()) }
     single { createNetworkApi(get()) }
 }
@@ -30,4 +30,4 @@ fun createOkHttpClient(): OkHttpClient = OkHttpClient
     })
     .build()
 
-fun createNetworkApi(retrofit: Retrofit) = retrofit.create(ScryfallService::class.java)
+fun createNetworkApi(retrofit: Retrofit): ScryfallService = retrofit.create(ScryfallService::class.java)

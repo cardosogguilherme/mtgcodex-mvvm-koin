@@ -8,11 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.myrium.data.CardRepository
-import com.myrium.data.remote.ScryfallService
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import org.koin.android.ext.android.get
 
 /**
@@ -26,13 +21,13 @@ class SecondFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val service: ScryfallService = get()
-
-        CoroutineScope(Dispatchers.IO).launch {
-            CardRepository(service).getCards().forEach {
-                Log.d("SecondFragment", "${it.name}")
-            }
-        }
+//        val service: ScryfallService = get()
+//
+//        CoroutineScope(Dispatchers.IO).launch {
+//            CardRepository(service).getCards().forEach {
+//                Log.d("SecondFragment", "${it.name}")
+//            }
+//        }
         return inflater.inflate(R.layout.fragment_second, container, false)
     }
 
