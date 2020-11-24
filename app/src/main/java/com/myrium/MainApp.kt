@@ -1,7 +1,7 @@
 package com.myrium
 
 import android.app.Application
-//import com.guilhermecardoso.core.di.appModule
+import com.guilhermecardoso.core.di.networkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -15,7 +15,7 @@ class MainApp: Application() {
             //inject Android context
             androidContext(this@MainApp)
             // use modules
-//            modules(networkModule)
+            modules(networkModule)
         }
     }
 }

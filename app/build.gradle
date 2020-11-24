@@ -58,6 +58,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
 
+    api project(':core')
+
     //Test
     testImplementation "junit:junit:$jUnitVersion"
     androidTestImplementation "com.android.support.test:runner:$runnerVersion"
@@ -65,8 +67,6 @@ dependencies {
 
     //Compomennts
     implementation "com.android.support.constraint:constraint-layout:1.1.0"
-
-
 
     //Timber
     implementation "com.jakewharton.timber:timber:4.4.0"
