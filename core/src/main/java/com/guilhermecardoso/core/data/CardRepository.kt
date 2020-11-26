@@ -1,8 +1,7 @@
 package com.guilhermecardoso.core.data
 
 import com.guilhermecardoso.core.data.model.Card
-import com.guilhermecardoso.core.data.remote.ScryfallService
-import kotlinx.coroutines.Deferred
+import com.guilhermecardoso.core.data.remote.services.ScryfallService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

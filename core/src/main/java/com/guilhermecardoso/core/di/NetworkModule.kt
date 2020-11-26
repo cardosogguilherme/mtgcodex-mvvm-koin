@@ -2,7 +2,7 @@ package com.guilhermecardoso.core.di
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.guilhermecardoso.core.data.endpoint
-import com.guilhermecardoso.core.data.remote.ScryfallService
+import com.guilhermecardoso.core.data.remote.services.ScryfallService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -30,4 +30,5 @@ fun createOkHttpClient(): OkHttpClient = OkHttpClient
     })
     .build()
 
-fun createNetworkApi(retrofit: Retrofit): ScryfallService = retrofit.create(ScryfallService::class.java)
+fun createNetworkApi(retrofit: Retrofit): ScryfallService = retrofit.create(
+    ScryfallService::class.java)

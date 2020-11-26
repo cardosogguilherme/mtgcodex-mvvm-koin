@@ -1,4 +1,4 @@
-package com.guilhermecardoso.core.data.remote
+package com.guilhermecardoso.core.data.remote.services
 
 import com.guilhermecardoso.core.data.model.CardResponseDTO
 import kotlinx.coroutines.Deferred
