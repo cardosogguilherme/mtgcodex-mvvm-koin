@@ -8,6 +8,7 @@ import kotlinx.coroutines.withContext
 class CardRepository(private val cardApi: ScryfallService) {
 
     suspend fun getCards(): List<Card> = withContext(Dispatchers.IO) {
-        return@withContext cardApi.getCards().await().data
+        return@withContext listOf()
+//        return@withContext cardApi.getCardsAsync().await().data?
     }
 }

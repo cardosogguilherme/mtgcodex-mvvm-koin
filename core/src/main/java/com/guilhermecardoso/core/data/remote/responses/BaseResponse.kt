@@ -1,5 +1,7 @@
 package com.guilhermecardoso.core.data.remote.responses
 
+import com.google.gson.annotations.SerializedName
+
 /*
 * Generic network response for a T type
 * @param object The type of response
@@ -9,14 +11,5 @@ package com.guilhermecardoso.core.data.remote.responses
 * @data The data returned
 * */
 
-data class BaseResponse<T>(
-    val `object`: ResponseObjectType
-)
-
-sealed class ResponseObjectType()
-object ListResponseType: ResponseObjectType()
-object SetResponseType: ResponseObjectType()
-object ErrorResponseType: ResponseObjectType()
-object UnknownResponseType: ResponseObjectType()
-
-//TODO Code SetResponse
+abstract class BaseResponse
+object UnknownResponseType: BaseResponse()

@@ -3,7 +3,7 @@ package com.guilhermecardoso.core.data.remote.responses
 import com.google.gson.annotations.SerializedName
 import com.guilhermecardoso.core.data.model.*
 
-data class CardListResponse(
+data class CardResponse(
     @SerializedName("artist") val artist: String? = null,
     @SerializedName("artist_ids") val artistIds: List<String> = listOf(),
     @SerializedName("booster") val booster: Boolean,
@@ -55,7 +55,7 @@ data class CardListResponse(
     @SerializedName("type_line") val typeLine: String,
     @SerializedName("uri") val uri: String,
     @SerializedName("variation") val variation: Boolean
-)
+): BaseResponse()
 
 data class ImageUris(
     val art_crop: String,
